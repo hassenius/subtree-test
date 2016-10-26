@@ -14,9 +14,17 @@ For example
 $ git remote add log-queue git@github.com:egymgmbh/log-queue.git
 $ git subtree add --prefix log-queue log-queue master
 ```
-This will create a new subdirectory for all repositories that are added.
 
-The benefit being that all repositories in the tree will be downloaded automatically when someone does a ```git clone``` on the root repository.
+This will create a new subdirectory for all repositories that are added.
+It is possible to group repositories in subdirectories, by using the following syntax
+
+``` 
+$ git subtree add --prefix healthcheckapi/rubyhealthcheck git@github.com:sportngin/okcomputer.git master
+```
+
+Both approaches are present in this "umbrella" repo
+
+
 
 ### Pros
 
