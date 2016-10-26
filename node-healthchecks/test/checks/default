@@ -1,0 +1,26 @@
+# Test the response errors
+/error
+
+# Test the response timeout
+/timeout
+
+# Test the response has specific status code
+/status
+
+# Test the response contains expected text
+# And that multiple check results are consolidated
+/expected   foo and bar
+/expected   foo
+/expected   bar
+
+# Test a redirect
+/redirect
+
+# Test a subdomain
+//admin.localhost/subdomain
+
+# Test HTTPS requests
+https://localhost/ssl-required
+
+# Used by Dokku, ignored by healthchecks
+WAIT=5
